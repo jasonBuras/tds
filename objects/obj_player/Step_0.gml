@@ -2,6 +2,7 @@
 var hor_movement = 0; //horizontal movement
 var vert_movement = 0; //vertical movement
 
+
 hor_movement = keyboard_check(right_key)-keyboard_check(left_key)
 vert_movement = keyboard_check(down_key)-keyboard_check(up_key)
 
@@ -42,6 +43,12 @@ var angle_to_mouse = point_direction(x,y,mouse_x,mouse_y)
 angle = angle_to_mouse
 
 //Bullet Firing
+
+if(score >= 100 && !noBrrt){
+	fire_cooldown_max -= 10	
+	noBrrt = true
+}
+
 if(mouse_check_button(mb_left)){
 	
 	if (fire_cooldown <= 0){
@@ -73,5 +80,9 @@ if(fire_cooldown > 0){
 
 //probably a better place for this
 if(!instance_exists(obj_enemy)){
+	if(room_exists(room_next(room))){
 		progress_level()
+	}else{
+		game_end()
+	}
 }

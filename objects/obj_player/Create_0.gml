@@ -1,12 +1,13 @@
 /// @description Move these to Create to avoid Step setting them each game frame.
 health = 50
 max_health = 50
-score = 0
+global.score = 0
 
 up_key = ord("W")
 left_key = ord("A") 
 down_key = ord("S")
 right_key = ord("D")
+noBrrt = false
 
 gunfire_x = 0
 gunfire_y = 0
@@ -15,7 +16,7 @@ mspeed = 3;//movement speed
 bullet_speed = 10;
 
 fire_cooldown = 10; //avoids firing when pressing play
-fire_cooldown_max = 10;
+fire_cooldown_max = 30;
 
 angle = 0
 
