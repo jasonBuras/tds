@@ -49,7 +49,7 @@ if(score >= 100 && !noBrrt){
 	noBrrt = true
 }
 
-if(mouse_check_button(mb_left)){
+if mouse_check_button(mb_left){
 	
 	if (fire_cooldown <= 0){
 		

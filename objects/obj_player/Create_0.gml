@@ -1,13 +1,13 @@
 /// @description Move these to Create to avoid Step setting them each game frame.
-health = 50
+/*health = 50
 max_health = 50
-global.score = 0
-
-up_key = ord("W")
-left_key = ord("A") 
+score = 0
+*/
+up_key = ord("W");
+left_key = ord("A"); 
 down_key = ord("S")
 right_key = ord("D")
-noBrrt = false
+noBrrt = false //idk a better solution
 
 gunfire_x = 0
 gunfire_y = 0
@@ -16,7 +16,7 @@ mspeed = 3;//movement speed
 bullet_speed = 10;
 
 fire_cooldown = 10; //avoids firing when pressing play
-fire_cooldown_max = 30;
+fire_cooldown_max = 20;
 
 angle = 0
 
@@ -36,5 +36,11 @@ f_hit = function(_id, _damage){
 		audio_play_sound(snd_ouch_3,1000,false),
 		audio_play_sound(snd_ouch_4,1000,false)
 	);	
+	}
+}
+
+function heal(){
+	if (player_health/max_health <= 1){
+			
 	}
 }
