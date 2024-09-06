@@ -13,5 +13,4 @@ function bleed(_x,_y){//blood, consider taking in ID to have different blood typ
 		b.speed = random_range(2,5)
 		b.direction = random_range(0,365)
 		b.friction = random_range(0.3,0.8)
-		show_debug_message("Creating blood at: " + string(_x) + ", " + string(_y));
 }

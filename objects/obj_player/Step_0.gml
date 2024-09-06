@@ -44,17 +44,18 @@ angle = angle_to_mouse
 
 //Bullet Firing
 
-if(score >= 100 && !noBrrt){
+if(global.player_score >= 100/*score >= 100*/ && !noBrrt){
 	fire_cooldown_max -= 10	
 	noBrrt = true
 }
+
 
 if mouse_check_button(mb_left){
 	
 	if (fire_cooldown <= 0){
 		
 		var gun_barrel_position_x = sprite_width/2
-		var gun_barrel_position_y = (sprite_height - 7.5)/2
+		var gun_barrel_position_y = ((sprite_height)/2) - 22
 		
 		var rotated_gun_x = gun_barrel_position_x * cos(degtorad(-angle)) - gun_barrel_position_y * sin(degtorad(-angle))
 		var rotated_gun_y = gun_barrel_position_x * sin(degtorad(-angle)) + gun_barrel_position_y * cos(degtorad(-angle))
@@ -79,10 +80,10 @@ if(fire_cooldown > 0){
 }
 
 //probably a better place for this
-if(!instance_exists(obj_enemy)){
+/*if(!instance_exists(obj_enemy)){
 	if(room_exists(room_next(room))){
 		progress_level()
 	}else{
 		game_end()
 	}
-}
+}*/

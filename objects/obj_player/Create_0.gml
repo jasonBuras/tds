@@ -1,8 +1,10 @@
 /// @description Move these to Create to avoid Step setting them each game frame.
-/*health = 50
+health = 50
 max_health = 50
 score = 0
-*/
+player_score = 0
+has_key = false
+
 up_key = ord("W");
 left_key = ord("A"); 
 down_key = ord("S")
@@ -28,6 +30,13 @@ f_hit = function(_id, _damage){
 	if(health <= 0){
 		audio_play_sound(snd_player_death,1000,false)
 		instance_destroy()//destroy player
+		room_restart()
+		
+		if(global.player_score <= 50){
+			global.player_score = 0	
+		}else{
+			global.player_score -= 50	
+		}
 	}
 	else{
 	sound_index = choose(
@@ -36,11 +45,5 @@ f_hit = function(_id, _damage){
 		audio_play_sound(snd_ouch_3,1000,false),
 		audio_play_sound(snd_ouch_4,1000,false)
 	);	
-	}
-}
-
-function heal(){
-	if (player_health/max_health <= 1){
-			
 	}
 }

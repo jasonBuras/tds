@@ -27,14 +27,14 @@ y_speed = lengthdir_y(speed, direction)
 
 f_hit = function(_id, _damage){
 	hp -= _damage;
-	score++
+	global.player_score++
 	audio_play_sound(snd_hitmarker,1000,false)
 	gunshot_heard = true
 	repeat(random_range(3,blood_amount)){
 			bleed(x,y)	
 	}
 	if(hp <= 0){
-		score += 10
+		global.player_score += 10
 		spawn_dead_body(x,y,angle)
 		instance_destroy();//destroys enemy
 		

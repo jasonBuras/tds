@@ -1,4 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-draw_text(room_width/2,100, "Score: " + string(global.player_score))
+has_key = true
+instance_destroy(obj_key)
