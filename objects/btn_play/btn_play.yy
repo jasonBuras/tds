@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite11",
-    "path":"sprites/Sprite11/Sprite11.yy",
+    "name":"spr_button_pressed",
+    "path":"sprites/spr_button_pressed/spr_button_pressed.yy",
   },
   "spriteMaskId":null,
   "visible":true,

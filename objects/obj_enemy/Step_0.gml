@@ -16,14 +16,21 @@ var x_moveamout = x_speed * moveSpd;
 var y_moveamout = y_speed * moveSpd;
 
 //collisions
-if place_meeting(x + x_speed, y, par_wall){
+if (place_meeting(x + x_speed, y, par_wall) || place_meeting(x + x_speed, y, obj_enemy)){
 	x_speed = 0;
 	moveDir = irandom_range(0,359)
 }
 
-if place_meeting(x, y+y_speed, par_wall){
+if (place_meeting(x, y+y_speed, par_wall) || place_meeting(x, y+y_speed, obj_enemy)){
 	y_speed = 0;
 	moveDir = irandom_range(0,359)
+}
+
+if (collision_line(x,y,obj_player.x,obj_player.y,par_wall,1,0)){
+	//Thank you Blaze Creates https://www.youtube.com/watch?v=yAfnoyazVyg&t=28s
+	visible = false	
+}else{
+	visible = true	
 }
 
 //actual movement (keep this below collisions)
@@ -38,6 +45,7 @@ var attack_distance = 8
 if(distance_to_point(obj_player.gunfire_x,obj_player.gunfire_y) <= hearing_range){
 	gunshot_heard = true	
 }
+
 
 if (distance_to_object(obj_player) <= track_distance || gunshot_heard){
 	moveSpd = 2

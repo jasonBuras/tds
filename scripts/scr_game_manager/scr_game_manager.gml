@@ -9,7 +9,7 @@ function spawn_dead_body(_x,_y,_angle){//dead zombie, consider taking in an ID t
 }
 
 function bleed(_x,_y){//blood, consider taking in ID to have different blood types for different characters
-	var	b = instance_create_depth(_x,_y,4,obj_blood)	
+	var	b = instance_create_depth(_x,_y,1,obj_blood)	
 		b.speed = random_range(2,5)
 		b.direction = random_range(0,365)
 		b.friction = random_range(0.3,0.8)

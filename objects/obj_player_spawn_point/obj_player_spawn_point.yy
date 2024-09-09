@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite18",
-    "path":"sprites/Sprite18/Sprite18.yy",
+    "name":"spr_player_spawn",
+    "path":"sprites/spr_player_spawn/spr_player_spawn.yy",
   },
   "spriteMaskId":null,
   "visible":true,
