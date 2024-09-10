@@ -5,8 +5,8 @@ health = global.max_health
 //player_score = 0
 has_key = false
 
-mag_size = 10
-mag_current = 10
+mag_size = global.magazine_size
+mag_current = global.magazine_size
 reloading = false
 isReloading = false
 reload_speed = global.reload_speed

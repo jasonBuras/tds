@@ -3,9 +3,14 @@
 Probably will be parent in the future
 Can have subclass enemy parent classes to have more dynamic enemies
 */
-visible = false
+isVisible = false
+alpha = 1
+lastX = 0
+lastY = 0
+lastAngle = 0
+
 hp = global.zombie_health
-hp_max = 10
+hp_max = global.zombie_health
 moveDir = irandom_range(0,359)
 angle = 0
 moveSpd = 1
@@ -32,7 +37,7 @@ f_hit = function(_id, _damage){
 	audio_play_sound(snd_hitmarker,1000,false)
 	gunshot_heard = true
 	repeat(random_range(3,blood_amount)){
-			bleed(x,y)	
+			bleed(x,y);
 	}
 	global.shots_hit++
 	if(hp <= 0){

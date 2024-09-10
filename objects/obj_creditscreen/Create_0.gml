@@ -11,4 +11,7 @@ https://opengameart.org/content/handgun-reload-sound-effect
 Character Sprites (waiting to find a good zombie sprite before I commit to this one):
 https://opengameart.org/content/animated-top-down-survivor-player
 
+Zombie Model:
+https://anwar2077.itch.io/zombie-top-down
+
 */

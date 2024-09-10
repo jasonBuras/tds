@@ -28,9 +28,9 @@ if (place_meeting(x, y+y_speed, par_wall) || place_meeting(x, y+y_speed, obj_ene
 
 if (collision_line(x,y,obj_player.x,obj_player.y,par_wall,1,0)){
 	//Thank you Blaze Creates https://www.youtube.com/watch?v=yAfnoyazVyg&t=28s
-	visible = false	
+	isVisible = false	
 }else{
-	visible = true	
+	isVisible = true	
 }
 
 //actual movement (keep this below collisions)

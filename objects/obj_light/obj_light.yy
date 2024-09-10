@@ -68,7 +68,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"name":"Light_Range","rangeEnabled":true,"rangeMax":5000.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"768","varType":1,},
+      ],"listItems":null,"multiselect":false,"name":"Light_Range","rangeEnabled":true,"rangeMax":5000.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"650","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"Light_Intensity","filters":[
         "GMTileSet",
         "GMSprite",
@@ -80,7 +80,7 @@
         "GMTimeLine",
         "GMObject",
         "GMRoom",
-      ],"listItems":null,"multiselect":false,"name":"Light_Intensity","rangeEnabled":true,"rangeMax":30.0,"rangeMin":0.001,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1.3","varType":0,},
+      ],"listItems":null,"multiselect":false,"name":"Light_Intensity","rangeEnabled":true,"rangeMax":30.0,"rangeMin":0.001,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1.2","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"Light_Shadow_Length","filters":[
         "GMTileSet",
         "GMSprite",

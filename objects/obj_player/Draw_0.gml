@@ -10,10 +10,11 @@ draw_sprite_ext(sprite_index,-1, x, y,1,1, angle, -1, 1)
 //health bar
 draw_sprite_stretched(spr_healthbar,0,healthbar_x,healthbar_y,(health/global.max_health) * healthbar_width, healthbar_height)
 draw_sprite(spr_healthbar_outline, 0, healthbar_x, healthbar_y)
+draw_set_font(fnt_game_text)
+draw_text(healthbar_x,healthbar_y-15, string(health) + "/" + string(global.max_health))
 
 //ammo
 draw_text(x,y + sprite_height, string(mag_current) + "/" + string(mag_size))
-
 draw_sprite_ext(spr_crosshair, 0, mouse_x, mouse_y, 1, 1, 0, c_white, 1)
 
 

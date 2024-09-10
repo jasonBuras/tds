@@ -74,6 +74,7 @@ if mouse_check_button(mb_left){
 		global.shots_fired++
 		fire_cooldown = fire_cooldown_max;
 		mag_current--
+		//instance_create_layer(gunfire_x,gunfire_y,"Instances", obj_light_muzzleflash)
 	}
 }
 
