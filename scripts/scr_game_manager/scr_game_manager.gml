@@ -14,3 +14,7 @@ function bleed(_x,_y){//blood, consider taking in ID to have different blood typ
 		_b.direction = random_range(0,365)
 		_b.friction = random_range(0.3,0.8)
 }
+
+function calculate_damage(_base_damage, _attack, _defense){
+	return _base_damage * (_attack / (_attack + _defense))	
+}

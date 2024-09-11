@@ -4,7 +4,8 @@ if(obj_player.has_key){
 	global.current_room_index++
 	window_set_cursor(cr_arrow)
 	if(global.current_room_index < array_length(global.level_sequence)){
-		global.zombie_health += 2
+		global.zombie_health += 5
+		global.zombie_defense += 5
 		room_goto(global.level_sequence[global.current_room_index])
 	
 	}else{

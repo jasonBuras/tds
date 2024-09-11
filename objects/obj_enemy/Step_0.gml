@@ -18,12 +18,13 @@ var y_moveamout = y_speed * moveSpd;
 //collisions
 if (place_meeting(x + x_speed, y, par_wall) || place_meeting(x + x_speed, y, obj_enemy)){
 	x_speed = 0;
-	moveDir = irandom_range(0,359)
+	moveDir = irandom_range(95,265)
 }
+
 
 if (place_meeting(x, y+y_speed, par_wall) || place_meeting(x, y+y_speed, obj_enemy)){
 	y_speed = 0;
-	moveDir = irandom_range(0,359)
+	moveDir = irandom_range(95,265)
 }
 
 if (collision_line(x,y,obj_player.x,obj_player.y,par_wall,1,0)){
@@ -46,13 +47,25 @@ if(distance_to_point(obj_player.gunfire_x,obj_player.gunfire_y) <= hearing_range
 	gunshot_heard = true	
 }
 
+if (distance_to_object(obj_player) <= track_distance){
+	is_tracking = true	
+	tracking_cooldown = tracking_cooldown_max
+}
 
-if (distance_to_object(obj_player) <= track_distance || gunshot_heard){
-	moveSpd = 2
+if (is_tracking || gunshot_heard){
+	moveSpd = 1.5
 	moveDir = point_direction(x,y,obj_player.x,obj_player.y)
 	if(distance_to_object(obj_player) <= attack_distance && attack_cooldown <= 0 && instance_exists(obj_player)){//To ensure player isn't dead
 		obj_player.f_hit(id, damage)
 		attack_cooldown = attack_cooldown_max
+	}
+}
+
+if(is_tracking){
+	tracking_cooldown--
+	if(tracking_cooldown <= 0){
+		is_tracking = false
+		tracking_cooldown = tracking_cooldown_max
 	}
 }
 

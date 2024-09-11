@@ -9,8 +9,8 @@
   "name":"btn_item_bulletupgrade",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu",
-    "path":"folders/Objects/Menu.yy",
+    "name":"Shop",
+    "path":"folders/Objects/Menu/Shop.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -19,6 +19,7 @@ global.current_room_index = 0
 
 //PLAYER PROPERTIES
 global.lives = 3
+global.player_money = 0
 global.player_score = 0
 global.player_speed = 3
 global.max_health = 50
@@ -32,8 +33,10 @@ global.fire_cooldown = 10
 global.fire_cooldown_max = 50
 global.fire_cooldown_min = 20
 
-//ZOMBIE HP
+//ZOMBIE
 global.zombie_health = 10
+global.zombie_defense = 5
+global.zombie_speed = .5
 
 global.message = ""
 global.message_timer = 0
