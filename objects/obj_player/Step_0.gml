@@ -54,7 +54,6 @@ if(global.player_score >= 100 && !noBrrt && global.fire_cooldown_max < global.fi
 if mouse_check_button(mb_left){
 	
 	if (fire_cooldown <= 0 && !isReloading){
-		
 		var gun_barrel_position_x = sprite_width/2
 		var gun_barrel_position_y = ((sprite_height)/2) - 20
 		
@@ -63,8 +62,8 @@ if mouse_check_button(mb_left){
 		
 		var _bullet_x = x + rotated_gun_x
 		var _bullet_y = y + rotated_gun_y
-		
-		var b = instance_create_depth(_bullet_x, _bullet_y, depth, obj_bullet_basic) //b is bullet
+		is_shooting = true
+		var b = instance_create_depth(_bullet_x, _bullet_y, depth, bullet_type) //b is bullet
 		b.speed = bullet_speed;
 		b.direction = point_direction(_bullet_x, _bullet_y, mouse_x, mouse_y);
 		b.image_angle = b.direction;
@@ -96,5 +95,5 @@ if(reload_countdown==0){
 
 if(fire_cooldown > 0){
 	fire_cooldown--;
+	show_debug_message(string(fire_cooldown))
 }
-

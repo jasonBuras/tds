@@ -8,7 +8,7 @@ alpha = 1
 lastX = 0
 lastY = 0
 lastAngle = 0
-defense = global.zombie_defense * 2
+defense = global.zombie_defense * 4
 
 
 hp = global.zombie_health * 2
@@ -19,7 +19,7 @@ angle = 0
 moveSpd = 0
 xSpd = 0
 ySpd = 0
-damage = 20
+damage = global.zombie_attack * 1.25
 attack_cooldown = 0
 attack_cooldown_max = 200
 blood_amount = 15

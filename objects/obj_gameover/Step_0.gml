@@ -3,6 +3,6 @@
 if(screen_timer > 0){
 	screen_timer--
 }else{
-	audio_stop_all()
+	instance_destroy(obj_music_player)
 	room_goto(rm_menu)	
 }

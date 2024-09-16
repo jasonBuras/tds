@@ -6,10 +6,12 @@ if(obj_player.has_key){
 	if(global.current_room_index < array_length(global.level_sequence)){
 		global.zombie_health += 5
 		global.zombie_defense += 5
+		global.zombie_attack += 5
 		room_goto(global.level_sequence[global.current_room_index])
 	
 	}else{
-		room_goto(rm_game_over_win)	
+		room_goto(rm_game_over_win)
+	global.current_room_index = 0
 	}
 }else{
 	global.message = "YOU NEED THE KEY"

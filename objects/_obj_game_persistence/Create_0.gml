@@ -14,6 +14,8 @@ global.level_sequence = [
 	rm_level_4,
 	rm_shop,
 	rm_boss_1,
+	rm_shop,
+	rm_level_bigroomtest,
 	rm_game_over_win]
 global.current_room_index = 0
 
@@ -27,16 +29,18 @@ global.max_health = 50
 //WEAPON
 global.magazine_size = 10
 global.bullet_speed = 10
-global.bullet_damage = 2
+global.bullet_damage = 3
 global.reload_speed = 120
-global.fire_cooldown = 10
+global.fire_cooldown = 50
 global.fire_cooldown_max = 50
 global.fire_cooldown_min = 20
+global.bullet_type = obj_bullet_basic
 
 //ZOMBIE
 global.zombie_health = 10
 global.zombie_defense = 5
 global.zombie_speed = .5
+global.zombie_attack = 15
 
 global.message = ""
 global.message_timer = 0
@@ -46,3 +50,4 @@ global.shots_fired = 0
 global.shots_hit = 0
 global.kill_count = 0
 
+room_goto_next() //cheeky but it works, make sure to keep this obj last in the rm_init Instance list

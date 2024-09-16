@@ -6,20 +6,22 @@ health = global.max_health
 has_key = false
 
 mag_size = global.magazine_size
-mag_current = global.magazine_size
+mag_current = 0
 reloading = false
 isReloading = false
 reload_speed = global.reload_speed
 reload_countdown = reload_speed
+bullet_type = global.bullet_type
+can_shoot = false
 
-up_key = ord("W");
-left_key = ord("A"); 
+up_key = ord("W")
+left_key = ord("A")
 down_key = ord("S")
 right_key = ord("D")
 noBrrt = false //idk a better solution
 
-gunfire_x = 0
-gunfire_y = 0
+gunfire_x = -500
+gunfire_y = -500
 isWalking = false
 
 mspeed = global.player_speed;//movement speed
@@ -28,6 +30,8 @@ bullet_speed = global.bullet_speed;
 fire_cooldown = global.fire_cooldown; //avoids firing when pressing play
 fire_cooldown_max = global.fire_cooldown_max;
 fire_cooldown_min= global.fire_cooldown_min
+
+is_shooting = false
 
 
 

@@ -17,7 +17,7 @@ angle = 0
 moveSpd = global.zombie_speed
 xSpd = 0
 ySpd = 0
-damage = 15
+damage = global.zombie_attack
 attack_cooldown = 0
 attack_cooldown_max = 100
 blood_amount = 15
@@ -55,5 +55,7 @@ f_hit = function(_id, _damage){
 		instance_destroy();//destroys enemy
 		
 	}
-	instance_destroy(_id);//destroys bullet
+	if(obj_player.bullet_type != obj_bullet_ap){
+		instance_destroy(_id);//destroys bullet
+	}
 }
