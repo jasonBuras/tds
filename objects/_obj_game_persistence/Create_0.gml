@@ -3,6 +3,7 @@
 
 //GAME PROPERTIES
 global.blood_on = true
+global.lighting_system_on = true
 global.level_sequence = [
 	rm_menu,
 	rm_level_1, 
@@ -13,11 +14,14 @@ global.level_sequence = [
 	rm_shop,
 	rm_level_4,
 	rm_shop,
-	rm_boss_1,
+	rm_level_5_boss,
 	rm_shop,
-	rm_level_bigroomtest,
+	rm_level_6,
+	rm_shop,
+	rm_level_7,
 	rm_game_over_win]
 global.current_room_index = 0
+global.current_level = 1
 
 //PLAYER PROPERTIES
 global.lives = 3

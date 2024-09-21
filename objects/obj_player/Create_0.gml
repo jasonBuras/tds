@@ -1,4 +1,13 @@
 /// @description Move these to Create to avoid Step setting them each game frame.
+enum states{
+	idle,
+	walking,
+	firing,
+	reloading
+}
+
+state = states.idle
+
 death_penalty = 10
 health = global.max_health
 //score = 0
@@ -41,6 +50,11 @@ angle = 0
 //vision
 vision_length = 200
 vision_angle = 45
+
+sprites[states.idle] = spr_player
+sprites[states.walking] = spr_player_walkin
+sprites[states.reloading] = spr_player_reloading
+sprites[states.firing] = spr_player_shooting
 
 
 

@@ -10,8 +10,8 @@ if(obj_player.has_key){
 		room_goto(global.level_sequence[global.current_room_index])
 	
 	}else{
+		global.current_room_index = 0
 		room_goto(rm_game_over_win)
-	global.current_room_index = 0
 	}
 }else{
 	global.message = "YOU NEED THE KEY"

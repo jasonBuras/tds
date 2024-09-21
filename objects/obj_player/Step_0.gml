@@ -14,8 +14,17 @@ healthbar_x = (x) - healthbar_width/2
 healthbar_y = (y) - global.max_health
 
 
-//MOVEMENT
+#region MOVEMENT
 var hasMoved = false
+
+if(keyboard_check(ord("W")) || keyboard_check(ord("A")) || keyboard_check(ord("S")) || keyboard_check(ord("D"))){
+	isMoving = true	
+	state = states.walking
+}else{
+	isMoving = false	
+	state = states.idle
+}
+
 //X Movement
 if (!place_meeting(x + x_moveamout, y, par_wall)){
 	x += x_moveamout
@@ -30,18 +39,22 @@ else{
 //Y Movement
 if(!place_meeting(x, y + y_moveamout, par_wall)){
 	y += y_moveamout
+	isWalking = true
 	
 }
 //Y Collision
 else{
 	while(!place_meeting(x, y + sign(y_moveamout), par_wall)){
 			y += sign(y_moveamout)
+			isWalking = false
+			state = states.idle
 	}
 }
 
 //Rotation
 var angle_to_mouse = point_direction(x,y,mouse_x,mouse_y)
 angle = angle_to_mouse
+#endregion
 
 //Bullet Firing
 /*
@@ -50,10 +63,11 @@ if(global.player_score >= 100 && !noBrrt && global.fire_cooldown_max < global.fi
 	noBrrt = true
 }*/
 
-
+#region FIRING
 if mouse_check_button(mb_left){
 	
 	if (fire_cooldown <= 0 && !isReloading){
+		state = states.firing
 		var gun_barrel_position_x = sprite_width/2
 		var gun_barrel_position_y = ((sprite_height)/2) - 20
 		
@@ -78,6 +92,7 @@ if mouse_check_button(mb_left){
 }
 
 if(mag_current == 0 && !isReloading){
+	state = states.reloading
 	isReloading = true	
 	audio_play_sound(snd_reload,1000,false)
 }
@@ -95,5 +110,24 @@ if(reload_countdown==0){
 
 if(fire_cooldown > 0){
 	fire_cooldown--;
-	show_debug_message(string(fire_cooldown))
+}
+#endregion
+
+//if(state == states.reloading){
+//	sprite_index = spr_player_reloading
+
+//}else if(state == states.firing){
+//	sprite_index = spr_player_shooting
+//	if(image_index >= image_number - 1){
+//		sprite_index = spr_player
+//		state = states.idle
+//	}
+//}else if(state == states.walking){
+//	sprite_index = spr_player_walkin
+//}else{
+//	sprite_index = spr_player
+//}
+
+switch(state){
+		
 }

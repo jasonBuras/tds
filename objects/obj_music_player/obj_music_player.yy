@@ -10,8 +10,8 @@
   "name":"obj_music_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"radio",
+    "path":"folders/Objects/radio.yy",
   },
   "parentObjectId":null,
   "persistent":true,
