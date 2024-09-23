@@ -29,12 +29,13 @@ global.player_money = 0
 global.player_score = 0
 global.player_speed = 3
 global.max_health = 50
+global.melee_strength = 10
 
 //WEAPON
 global.magazine_size = 10
 global.bullet_speed = 10
 global.bullet_damage = 3
-global.reload_speed = 120
+global.reload_speed = 1 //controls animation speed. 1 is default. ++ to speed up
 global.fire_cooldown = 50
 global.fire_cooldown_max = 50
 global.fire_cooldown_min = 20

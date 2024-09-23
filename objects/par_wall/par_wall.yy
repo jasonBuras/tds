@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"par_wall",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_bullet_basic","path":"objects/obj_bullet_basic/obj_bullet_basic.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"par_wall",
   "overriddenProperties":[],
@@ -10,8 +12,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"par_bullet_collision",
-    "path":"objects/par_bullet_collision/par_bullet_collision.yy",
+    "name":"par_obstacle",
+    "path":"objects/par_obstacle/par_obstacle.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

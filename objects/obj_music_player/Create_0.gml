@@ -3,7 +3,7 @@
 
 //create array/list for all sound tracks
 //draw sprites for play/pause, skip, mute, shuffle, etc
-audio_playlist =[
+audio_playlist = [
 snd_music,
 snd_music_2
 ];

@@ -13,3 +13,7 @@ if(isVisible){
 	draw_sprite_ext(spr_enemy_idle,-1, lastX, lastY,1,1, lastAngle, -1, alpha)
 	alpha -= .005
 }
+
+
+//PATH (debug)
+draw_path(path,x,y,1)

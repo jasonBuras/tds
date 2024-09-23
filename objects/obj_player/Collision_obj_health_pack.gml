@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+var amount_to_heal = global.max_health * .25
 if(health < global.max_health){
-	if(global.max_health - health >= 30){
-		health += 30
+	if(global.max_health - health >= amount_to_heal){
+		health += amount_to_heal
 		instance_destroy(other)
 	}else{
 		health = global.max_health	

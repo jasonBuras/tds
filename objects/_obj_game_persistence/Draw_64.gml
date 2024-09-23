@@ -9,5 +9,6 @@ if(global.current_room_index > 0){
 }
 
 if(global.show_message){
-	draw_text(obj_player.x,obj_player.y - obj_player.sprite_height, global.message)
+	draw_set_font(fnt_game_text)
+	draw_text(obj_player.x, obj_player.y - obj_player.sprite_height - 20, global.message)
 }

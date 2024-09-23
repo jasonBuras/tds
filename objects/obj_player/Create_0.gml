@@ -3,7 +3,8 @@ enum states{
 	idle,
 	walking,
 	firing,
-	reloading
+	reloading,
+	melee
 }
 
 state = states.idle
@@ -15,7 +16,7 @@ health = global.max_health
 has_key = false
 
 mag_size = global.magazine_size
-mag_current = 0
+mag_current = global.magazine_size
 reloading = false
 isReloading = false
 reload_speed = global.reload_speed

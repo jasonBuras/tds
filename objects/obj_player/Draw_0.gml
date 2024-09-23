@@ -32,6 +32,20 @@ switch state{
 }*/
 
 draw_sprite_ext(sprite_index,-1, x, y,1,1, angle, -1, 1)
+if(image_index >= image_number - 1){
+	image_speed = 0
+	
+	if(isReloading){
+		mag_current = mag_size
+		isReloading = false
+		reload_countdown = reload_speed
+		state = states.idle
+		image_index = 0
+	}else if(is_shooting){
+		state = states.idle
+		image_index = 0
+	}
+}
 
 //health bar
 draw_sprite_stretched(spr_healthbar,0,healthbar_x,healthbar_y,(health/global.max_health) * healthbar_width, healthbar_height)

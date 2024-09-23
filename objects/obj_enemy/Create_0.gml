@@ -31,7 +31,19 @@ is_tracking = false
 tracking_cooldown_max = 300
 tracking_cooldown = 300
 
+// Thank you 1up Indie: https://www.youtube.com/watch?v=gqzsBhb7ov4
+valid_target = false
+path = path_add()
 
+while (!valid_target) {
+	    target_x = irandom(room_width);
+	    target_y = irandom(room_height);
+
+	    if (!collision_point(target_x, target_y, par_obstacle, false, true)) {
+	        valid_target = true;
+    }
+}	
+alarm[0] = 1
 
 x_speed = lengthdir_x(speed, direction)
 y_speed = lengthdir_y(speed, direction)
